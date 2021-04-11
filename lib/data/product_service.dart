@@ -10,8 +10,8 @@ class ProductService {
   ProductService._internal();
   static List<Product> getAll() {
     products.add(new Product(1, 'Acer Laptop', 6000));
-    products.add(new Product(1, 'Acer Laptop', 6000));
-    products.add(new Product(1, 'Acer Laptop', 6000));
+    products.add(new Product(2, 'Asus Laptop', 7000));
+    products.add(new Product(3, 'HP Laptop', 8000));
     return products;
   }
 }
