@@ -36,19 +36,20 @@ class ProductListScreen extends StatelessWidget {
 
   buildProductListItems(AsyncSnapshot snapshot) {
     return ListView.builder(
-        itemCount: snapshot.data.length,
-        itemBuilder: (BuildContext context, index) {
-          final list = snapshot.data;
-          return ListTile(
-            title: Text(list[index].name),
-            subtitle: Text(list[index].price.toString()),
-            trailing: IconButton(
-              icon: Icon(Icons.add_shopping_cart),
-              onPressed: () {
-                cartBloc.addToCart(Cart(list[index], 1));
-              },
-            ),
-          );
-        });
+      itemCount: snapshot.data.length,
+      itemBuilder: (BuildContext context, index) {
+        final list = snapshot.data;
+        return ListTile(
+          title: Text(list[index].name),
+          subtitle: Text(list[index].price.toString()),
+          trailing: IconButton(
+            icon: Icon(Icons.add_shopping_cart),
+            onPressed: () {
+              cartBloc.addToCart(Cart(list[index], 1));
+            },
+          ),
+        );
+      },
+    );
   }
 }
